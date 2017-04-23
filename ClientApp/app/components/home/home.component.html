@@ -1,0 +1,38 @@
+<div id="page">
+    <dx-responsive-box [(height)]="height"
+                       [(screenByWidth)]="screen">
+
+        <dxi-row [ratio]="0" [baseSize]="50"></dxi-row>
+        <dxi-row [ratio]="1"></dxi-row>
+
+        <dxi-col [ratio]="1"></dxi-col>
+        <dxi-col [ratio]="2" screen="lg"></dxi-col>
+
+        <dxi-item class="header item">
+            <dxi-location [row]="0"
+                          [col]="0"
+                          [colspan]="2">
+            </dxi-location>
+            <p>Header</p>
+        </dxi-item>
+        <dxi-item class="left-side-bar item">
+            <dxi-location [row]="1"
+                          [col]="0"
+                          screen="lg"></dxi-location>
+            <dxi-location [row]="2"
+                          [col]="0"
+                          screen="sm"></dxi-location>
+            <p>Left Bar</p>
+        </dxi-item>
+        <dxi-item class="content item">
+            <dxi-location [row]="1"
+                          [col]="1"
+                          screen="lg"></dxi-location>
+            <dxi-location [row]="1"
+                          [col]="0"
+                          [colspan]="2"
+                          screen="sm"></dxi-location>
+            <p>Content</p>
+        </dxi-item>
+    </dx-responsive-box>
+</div>
